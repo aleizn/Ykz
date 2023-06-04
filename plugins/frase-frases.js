@@ -3,8 +3,8 @@ import fetch from 'node-fetch'
 let handler = async (m, { conn, command }) => {
     
 if (command == 'consejo') {
-//let res = await fetch("https://zenzapis.xyz/randomtext/motivasi?apikey=hdiiofficial")
-let res = await fetch(`https://latam-api.vercel.app/api/rand_aviso?apikey=brunosobrino`)
+    let res = await fetch("https://zenzapis.xyz/randomtext/motivasi?apikey=hdiiofficial");
+ //let res = await fetch("https://supra-api.herokuapp.com/api/conselho?apikey=supraz")
 let json = await res.json()
 let frase = json.result.message
 let frase1 = await translate(frase, { to: 'es', autoCorrect: true })
